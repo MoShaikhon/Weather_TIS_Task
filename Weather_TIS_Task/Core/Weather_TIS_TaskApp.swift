@@ -11,7 +11,7 @@ import SwiftUI
 struct Weather_TIS_TaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WeatherMainView(weatherViewModel: WeatherViewModel(repo: WeatherRepository(remoteService: WeatherService(service: NetworkService()))))
         }
     }
 }
